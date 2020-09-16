@@ -1,7 +1,7 @@
 "use strict"
 //задание1
 /*let age = prompt('Сколько тебе лет?', "");
-alert(`Тебе ${age} лет!`);
+alert(`Тебе ${age} лет!`);*/
 
 
 //задание2
@@ -24,7 +24,7 @@ if (value > 0) {
 
 //задание5
 if (!(age >= 14 && age <= 90)) ;
-if (age < 14 || age > 90) ;*/
+if (age < 14 || age > 90) ;
 
 //задание6
 let name = prompt('Кто там?', '')
@@ -33,15 +33,24 @@ if (name == 'Админ') {
     let parol = prompt('Пароль?', '');
 
     if (parol == 'Я главный') {
-        alert( 'Здравствуйте!' );
+        alert('Здравствуйте!');
     } else if (parol == '' || parol == null) {
-        alert( 'Отменено' );
+        alert('Отменено');
     } else {
-        alert( 'Неверный пароль' );
+        alert('Неверный пароль');
     }
 
 } else if (name == '' || name == null) {
-    alert( 'Отменено' );
+    alert('Отменено');
 } else {
-    alert( "Я вас не знаю" );
+    alert("Я вас не знаю");
+}
+
+//адание 6
+for (let i = 0; i < 10; i++) ;
+{
+    if (i % 2 == 0)
+    {
+        alert(i);
+    }
 }
