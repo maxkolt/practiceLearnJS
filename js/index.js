@@ -1,10 +1,10 @@
 "use strict"
 //задание1
-/*let age = prompt('Сколько тебе лет?', "");
-alert(`Тебе ${age} лет!`);*/
+let age = prompt('Сколько тебе лет?', "");
+alert(`Тебе ${age} лет!`);
 
 
-//задание2
+//задание 2
 let company = prompt('Whats the JavaScript?', '');
 if (company == 'ECMAScript') {
     alert('Верно!');
@@ -12,7 +12,7 @@ if (company == 'ECMAScript') {
     alert('You don t know? “ECMAScript”!');
 }
 
-//задание3
+//задание 3
 let value = prompt('Введите число', 0);
 if (value > 0) {
     alert(1);
@@ -22,51 +22,18 @@ if (value > 0) {
     alert(0);
 }
 
-//задание5
+//задание 5
 if (!(age >= 14 && age <= 90)) ;
 if (age < 14 || age > 90) ;
 
-//задание6
-let name = prompt('Кто там?', '')
-if (name == 'Админ') {
-
-    let parol = prompt('Пароль?', '');
-
-    if (parol == 'Я главный') {
-        alert('Здравствуйте!');
-    } else if (parol == '' || parol == null) {
-        alert('Отменено');
-    } else {
-        alert('Неверный пароль');
-    }
-
-} else if (name == '' || name == null) {
-    alert('Отменено');
+//задание 6 не сам делал
+if (browser == 'Edge') {
+    alert("You've got the Edge!");
+} else if (browser == 'Chrome'
+    || browser == 'Firefox'
+    || browser == 'Safari'
+    || browser == 'Opera') {
+    alert('Okay we support these browsers too');
 } else {
-    alert("Я вас не знаю");
+    alert('We hope that this page looks ok!');
 }
-
-//адание 6
-for (let i = 0; i < 10; i++) ;
-{
-    if (i % 2 == 0) {
-        alert(i);
-    }
-}
-
-
-let num;
-do {
-    num = prompt("Введите число, большее 100?", 0);
-} while (num <= 100 && num);
-
-
-let n = 10;
-nextPrime:
-    for (let i = 2; i <= n; i++) {
-
-        for (let j = 2; j < i; j++) {
-            if (i % j == 0) continue nextPrime;
-        }
-        alert(i);
-    }
