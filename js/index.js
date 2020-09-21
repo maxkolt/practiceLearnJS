@@ -53,8 +53,29 @@ function min(a, b) {
 
 function pow(x, n) {
     let result = x;
-for (let i = 1; 1 < n; i++) {
-    result *= x;
+    for (let i = 1; 1 < n; i++) {
+        result *= x;
+    }
+    return result
 }
-return result
+
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n < 1) {
+    alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+} else {
+    alert(pow(x, n));
 }
+
+//задание 8
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+
+ask(
+    "Вы согласны?",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение.")
+);
