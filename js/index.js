@@ -40,6 +40,21 @@ if (browser == 'Edge') {
 
 //задание 7
 function checkAge(age) {
-    return(age > 18) || confirm('Родители разрешили?')
+    return (age > 18) || confirm('Родители разрешили?')
 }
 
+function min(a, b) {
+    if (a < b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+function pow(x, n) {
+    let result = x;
+for (let i = 1; 1 < n; i++) {
+    result *= x;
+}
+return result
+}
