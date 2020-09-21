@@ -37,3 +37,9 @@ if (browser == 'Edge') {
 } else {
     alert('We hope that this page looks ok!');
 }
+
+//задание 7
+function checkAge(age) {
+    return(age > 18) || confirm('Родители разрешили?')
+}
+
