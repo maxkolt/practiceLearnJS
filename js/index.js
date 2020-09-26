@@ -79,3 +79,18 @@ ask(
     () => alert("Вы согласились."),
     () => alert("Вы отменили выполнение.")
 );
+
+//задание 9
+let user = {
+    name: "Jone",
+    surname: "Smith"
+}
+user.name = "Pete";
+delete obj.name;
+
+function isEmpty(obj) {
+    for (let key in obj) {
+        return false;
+    }
+    return true;
+}
