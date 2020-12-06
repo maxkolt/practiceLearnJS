@@ -346,40 +346,40 @@ function Calculator() {
     };
 }
 
-let vasya = { name: "Вася", age: 25 };
-let petya = { name: "Петя", age: 30 };
-let masha = { name: "Маша", age: 28 };
+let vasya = {name: "Вася", age: 25};
+let petya = {name: "Петя", age: 30};
+let masha = {name: "Маша", age: 28};
 
-let users = [ vasya, petya, masha ];
+let users = [vasya, petya, masha];
 
 let names = users.map(item => item.name);
 
-alert( names );
+alert(names);
 
 
-let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
-let petya = { name: "Петя", surname: "Иванов", id: 2 };
-let masha = { name: "Маша", surname: "Петрова", id: 3 };
+let vasya = {name: "Вася", surname: "Пупкин", id: 1};
+let petya = {name: "Петя", surname: "Иванов", id: 2};
+let masha = {name: "Маша", surname: "Петрова", id: 3};
 
-let users = [ vasya, petya, masha ];
+let users = [vasya, petya, masha];
 
 let usersMapped = users.map(user => ({
     fullName: `${user.name} ${user.surname}`,
     id: user.id
 }));
 
-alert( usersMapped[0].fullName );
+alert(usersMapped[0].fullName);
 
 
 function sortByAge(arr) {
     arr.sort((a, b) => a.age > b.age ? 1 : -1);
 }
 
-let vasya = { name: "Вася", age: 25 };
-let petya = { name: "Петя", age: 30 };
-let masha = { name: "Маша", age: 28 };
+let vasya = {name: "Вася", age: 25};
+let petya = {name: "Петя", age: 30};
+let masha = {name: "Маша", age: 28};
 
-let arr = [ vasya, petya, masha ];
+let arr = [vasya, petya, masha];
 
 sortByAge(arr);
 
@@ -393,7 +393,7 @@ function topSalary(salaries) {
     let max = 0;
     let maxName = null;
 
-    for(const [name, salary] of Object.entries(salaries)) {
+    for (const [name, salary] of Object.entries(salaries)) {
         if (max < salary) {
             max = salary;
             maxName = name;
@@ -401,6 +401,7 @@ function topSalary(salaries) {
     }
     return maxName;
 }
+
 //
 
 let user = {
@@ -424,7 +425,7 @@ let meetup = {
 room.occupiedBy = meetup;
 meetup.self = meetup;
 
-alert( JSON.stringify(meetup, function replacer(key, value) {
+alert(JSON.stringify(meetup, function replacer(key, value) {
     alert(`${key}: ${value}`);
     return (key != "" && value == meetup) ? undefined : value;
 }));
@@ -439,7 +440,7 @@ function sumTo(n) {
     return sum;
 }
 
-alert( sumTo(100) );
+alert(sumTo(100));
 
 //
 
@@ -448,27 +449,47 @@ function sumTo(n) {
     return n + sumTo(n - 1);
 }
 
-alert( sumTo(100) );
+alert(sumTo(100));
 
 //
 
 function Counter() {
     let count = 0;
 
-    this.up = function() {
+    this.up = function () {
         return ++count;
     };
 
-    this.down = function() {
+    this.down = function () {
         return --count;
     };
 }
 
 let counter = new Counter();
 
-alert( counter.up() );
-alert( counter.up() );
-alert( counter.down() );
+alert(counter.up());
+alert(counter.up());
+alert(counter.down());
 
 //
 
+function inArray(arr) {
+    return function (x) {
+        return arr.includes(x);
+    };
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+alert(arr.filter(inArray([1, 2, 10])));
+
+
+function inBetween(a, b) {
+    return function(x) {
+        return x >= a && x <= b;
+    };
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+alert( arr.filter(inBetween(3, 6)) );
+
+//
