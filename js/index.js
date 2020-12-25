@@ -860,3 +860,34 @@ f();
 
 //
 
+
+function abc(one, two){
+    let result
+
+    try {
+        if(two === 0){
+            throw new SyntaxError("Неправильный парам")
+        }
+
+        else {
+            result = one / two;
+        }
+        console.log('верно');
+    } catch(e){
+        console.log('ошибка: ' + e);
+        return -1;
+    }
+
+    return result;
+}
+
+
+const PROBLEM = abc(40, 0);
+const result = abc(30, 3);
+const result_3 = abc(0, 40);
+
+
+console.log(result);
+console.log(result_3);
+console.log(PROBLEM);
+
