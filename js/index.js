@@ -891,41 +891,38 @@ console.log(result);
 console.log(result_3);
 console.log(PROBLEM);
 
+//
 
 
+var h1 = document.querySelector('h1');
+const h1Content = h1.textContent;
 
 
-
-
-
-
-function abc(one, two){
-    let result
-
-    try {
-        if(two === 0){
-            throw new SyntaxError("Неправильный парам")
-        }
-
-        else {
-            result = one / two;
-        }
-        console.log('верно');
-    } catch(e){
-        console.log('ошибка: ' + e);
-        return -1;
-    }
-
+function isLonger(строкаДляТеста){
+    const count = строкаДляТеста.length;
+    const result = count > 10;
     return result;
 }
 
 
-const PROBLEM = abc(40, 0);
-const result = abc(30, 3);
-const result_3 = abc(0, 40);
+const pArr = document.querySelectorAll('p');
 
 
-console.log(result);
-console.log(result_3);
-console.log(PROBLEM);
+function ukorotit(){
+
+    pArr.forEach(el => {
+        const textContent = el.textContent;
+        if(isLonger(textContent)){
+            const newString = textContent.slice(0, 10)  + "...";
+            console.log(newString);
+            el.innerHTML =  newString;
+        }
+    });
+
+}
+
+document.querySelector("button").onClick = function(){
+    () => ukorotit()
+}
+
 
